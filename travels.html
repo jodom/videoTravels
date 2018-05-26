@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> TRIALSVG </title>
+
+    <!--Linking my html file to leaflet to obtain its styles and code for interactivity-->
+
+    <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyAxQgEL8Q3GPJJXbJzhkYXs-KhPX1wL5s0&libraries=geometry"></script>
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+    <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>  
+</head>
+
+<body>
+    <div class="content">
+        <h1>SYNC VIDEO TO SVG AND GOOGLE MAP</h1>
+
+        <P> This webpage contains a youtube synced video, an SVG and google maps of Vienna featuring a tour from karlsplatz to
+            TU Wien Cartography lecture building. The svg map was custom made in illustrator and edited in html. The google
+            map is zoomed into the target area and both illustrate the motion in the video.
+        </P>
+        <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/SetgRf181L0?autoplay=0&controls=1&loop=0&showinf
+            o=0&modestbranding=1&fs=0&rel=0&enablejsapi=1&version=3&loop=1&playlist=SetgRf181L0" frameborder="0" style="border: solid 4px 
+            #37474F" allow="autoplay;encrypted-media" allowfullscreen></iframe>
+
+        <p id="timer">initializing...</p>
+
+        <div class="map1">
+            <svg width="200px" height="250px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999
+                /xlink" x="0px" y="0px" viewBox="0 0 200 250" enable-background="new 0 0 200 250" xml:space="preserve">
+
+                <g id="my_basemap">
+                    <polyline id="path" fill="none" stroke="#F921EF" stroke-width="2" stroke-miterlimit="10" points="82.379,61.64 86.861,63.271 88.9,68.132 
+                        88.099,76.631 
+                            86.513,83.511 82.5,88.771 82.5,94.713 86.919,98.076 96.818,102.527 105.003,105.358 106.263,112.236 105.5,119.113 
+                            105.5,124.448 101.927,132.869 96.433,141.769 93.686,148.242 86.446,159.974 81.208,170.897 73.127,187.889 71.11,197.598 
+                            73.54,202.048" />
+
+                    <path opacity="0.5" fill="#C3996B" stroke="#231F20" stroke-width="0.9292" stroke-miterlimit="10" d="M53.719,30.919L34.3,92.008
+                        l-8.496,28.724L25.4,131.655l-5.259,46.929l-1.214,18.61c0,0,33.578,25.083,34.792,25.083c1.214,0,5.259,6.473,5.259,6.473
+                        l33.174-10.114l33.174-16.992l17.801-9.709l-11.732-31.556l-9.305-17.396l32.769-13.35l19.419-23.06l2.427-36.815L63.833,30.11
+                        L53.719,30.919z" />
+                </g>
+
+                <g id="stations">
+                    <circle fill="none" stroke="#f9f921" stroke-width="0.9292" stroke-miterlimit="10" cx="73.47" cy="202.118" r="3.957" />
+                    <circle fill="none" stroke="#f9f921" stroke-width="0.9292" stroke-miterlimit="10" cx="104.649" cy="125.335" r="3.754" />
+                    <circle fill="none" stroke="#f9f921" stroke-width="0.9292" stroke-miterlimit="10" cx="104.439" cy="105.94" r="3.754" />
+                    <circle fill="none" stroke="#f9f921" stroke-width="0.9292" stroke-miterlimit="10" cx="82.588" cy="94.625" r="3.957" />
+                    <circle fill="none" stroke="#f9f921" stroke-width="0.9292" stroke-miterlimit="10" cx="83.763" cy="62.115" r="3.552" />
+                </g>
+
+                <g id="overlays">
+                    <circle id="marker" fill="#FF0000" stroke="#ffffff" cx="59.571" cy="48.497" r="4" />
+                </g>
+            </svg>
+        </div>
+        <script src="https://www.youtube.com/iframe_api"></script>
+        <script src="main.js" type="text/javascript"></script>
+    </div>
+</body>
+
+</html>
